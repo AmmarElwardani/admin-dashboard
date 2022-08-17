@@ -5,7 +5,7 @@ import { financialChartData, FinancialPrimaryXAxis, FinancialPrimaryYAxis } from
 import { useStateContext } from '../../contexts/ContextProvider';
 import { Header } from '../../components';
 
-const date1 = new Date('2017, 1, 1');
+const date1 = new Date('2016, 1, 1');
 
 
 function filterValue(value) {
