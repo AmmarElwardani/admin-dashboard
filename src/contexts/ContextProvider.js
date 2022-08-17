@@ -29,8 +29,7 @@ export const ContextProvider = ({ children }) => {
   };
 
   const handleClick = (clicked) => {
-   
-    setIsClicked({ ...initialState, [clicked]: !initialState[clicked] });
+    setIsClicked({ ...isClicked, [clicked]: !isClicked[clicked] });
     
   };
   return (

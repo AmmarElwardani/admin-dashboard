@@ -58,7 +58,6 @@ const Navbar = () => {
       setActiveMenu(true);
     }
   }, [screenSize]);
-
   const handleActiveMenu = () => setActiveMenu(!activeMenu)
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
