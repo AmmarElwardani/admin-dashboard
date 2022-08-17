@@ -40,6 +40,7 @@ const Navbar = () => {
     screenSize,
     setScreenSize,
     currentColor,
+    
   } = useStateContext();
 
   useEffect(() => {
@@ -57,11 +58,13 @@ const Navbar = () => {
       setActiveMenu(true);
     }
   }, [screenSize]);
+
+  const handleActiveMenu = () => setActiveMenu(!activeMenu)
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
         title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        customFunc={handleActiveMenu}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
@@ -89,13 +92,13 @@ const Navbar = () => {
         <TooltipComponent content="Profile" postion="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
-            onClick={() => handleClick("userProfile")}
+            onClick={() => handleClick('userProfile')}
           >
             <img className=" rounded-full w-8 h-8" src={avatar} />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
               <span className="text-gray-400 font-bold ml-1 text-14">
-                Micheal
+                Jhon
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />

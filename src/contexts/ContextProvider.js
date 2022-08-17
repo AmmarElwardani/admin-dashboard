@@ -29,7 +29,9 @@ export const ContextProvider = ({ children }) => {
   };
 
   const handleClick = (clicked) => {
-    setIsClicked({ ...initialState, [clicked]: true });
+   
+    setIsClicked({ ...initialState, [clicked]: !initialState[clicked] });
+    
   };
   return (
     <StateContext.Provider
@@ -47,6 +49,7 @@ export const ContextProvider = ({ children }) => {
         setThemeSettings,
         setMode,
         setColor,
+        
       }}
     >
       {children}
